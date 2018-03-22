@@ -1673,3 +1673,134 @@ exports['API tests POST /users - DB 1'] = {
     }
   ]
 }
+
+exports['API tests GET /articles?author=jake - res.body 1'] = {
+  "articles": [
+    {
+      "slug": "articleslug-1",
+      "title": "Title Article One",
+      "description": "description article one",
+      "body": "Body Article One",
+      "createdAt": "2016-02-23T20:54:16.969Z",
+      "updatedAt": "2016-02-23T20:54:16.969Z",
+      "tagList": [
+        "tag1",
+        "tag2"
+      ],
+      "favorited": false,
+      "favoritesCount": 1,
+      "author": {
+        "username": "jake",
+        "bio": "I'm Jake",
+        "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+        "following": false
+      }
+    }
+  ],
+  "articlesCount": 1
+}
+
+exports['API tests GET /articles?author=jake - DB 1'] = {
+  "articles": [
+    {
+      "title": "Title Article One",
+      "slug": "articleslug-1",
+      "body": "Body Article One",
+      "createdAt": "2016-02-23T20:54:16.969Z",
+      "updatedAt": "2016-02-23T20:54:16.969Z",
+      "tagList": [
+        "tag1",
+        "tag2"
+      ],
+      "description": "description article one",
+      "author": "jake",
+      "favoritesCount": 1
+    },
+    {
+      "title": "Title Article Two",
+      "slug": "articleslug-2",
+      "body": "Body Article Two",
+      "createdAt": "2017-02-23T20:54:16.969Z",
+      "updatedAt": "2017-02-23T20:54:16.969Z",
+      "tagList": [
+        "tag2",
+        "tag1"
+      ],
+      "description": "description article Two",
+      "author": "joe",
+      "favoritesCount": 1
+    },
+    {
+      "title": "Title Article Three",
+      "slug": "articleslug-3",
+      "body": "Body Article Three",
+      "createdAt": "2018-02-23T20:54:16.969Z",
+      "updatedAt": "2018-02-23T20:54:16.969Z",
+      "tagList": [
+        "tag2",
+        "tag3"
+      ],
+      "description": "description article Three",
+      "author": "jim",
+      "favoritesCount": 1
+    }
+  ],
+  "comments": [
+    {
+      "id": true,
+      "createdAt": "2016-02-18T03:22:56.637Z",
+      "updatedAt": "2016-02-18T03:22:56.637Z",
+      "body": "Jake takes a Jacobian",
+      "article": "articleslug-1",
+      "author": "jake"
+    },
+    {
+      "id": true,
+      "createdAt": "2015-02-18T03:22:56.637Z",
+      "updatedAt": "2015-02-18T03:22:56.637Z",
+      "body": "Jim takes a Jacobian",
+      "article": "articleslug-1",
+      "author": "jim"
+    },
+    {
+      "id": true,
+      "createdAt": "2014-02-18T03:22:56.637Z",
+      "updatedAt": "2014-02-18T03:22:56.637Z",
+      "body": "Joe takes a Jacobian",
+      "article": "articleslug-1",
+      "author": "joe"
+    }
+  ],
+  "users": [
+    {
+      "username": "jake",
+      "email": "jake@jake.jake",
+      "bio": "I'm Jake",
+      "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+      "following": false,
+      "favorites": false,
+      "hash": true,
+      "salt": true
+    },
+    {
+      "username": "jim",
+      "email": "jim@jim.jim",
+      "bio": "I'm Jim",
+      "image": "https://i.stack.imgur.com/xHWG8.jpg",
+      "following": false,
+      "favorites": false,
+      "hash": true,
+      "salt": true
+    },
+    {
+      "username": "joe",
+      "email": "joe@joe.joe",
+      "bio": "I'm Joe",
+      "image": "https://i.stack.imgur.com/xHWG8.jpg",
+      "following": false,
+      "favorites": false,
+      "hash": true,
+      "salt": true
+    }
+  ]
+}

@@ -57,12 +57,12 @@ router.get('/', auth.optional, function (req, res, next) {
 
   if (authorName) {
     // query.author = author._id
-    query.push(({ author }) => author.username === authorName)
+    query.push(({ author }) => author === authorName)
   }
 
   if (favoriterName) {
     // query._id = { $in: favoriter.favorites }
-    query.push(({ author }) => author.username === favoriterName)
+    query.push(({ author }) => author === favoriterName)
   }
 
   let user = req.payload
