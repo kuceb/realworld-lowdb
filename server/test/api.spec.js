@@ -16,7 +16,7 @@ const cleanseDb = (db) => {
     articles: [],
     comments: ['id'],
   }
-  
+
   Object.keys(db).forEach((key) => {
     db[key] = db[key].map((item) => {
       cleanse[key].forEach((prop) => {
@@ -25,15 +25,15 @@ const cleanseDb = (db) => {
       return item
     }
   )
-})
-return db
+  })
+  return db
 }
 
-const snapshotAll = (res) => 
-    Promise.resolve(snapshot(getTestName()+" - res.body", res.body))
+const snapshotAll = (res) =>
+    Promise.resolve(snapshot(`${getTestName()} - res.body`, res.body))
     .then(yieldDb)
     .then(cleanseDb)
-    .then(db=>snapshot(getTestName()+" - DB", db))
+    .then((db) => snapshot(`${getTestName()} - DB`, db))
 
 const seedUsersSingle = () => {
   const seed = _.cloneDeep(require('../seeds/users/single.json'))
@@ -51,6 +51,11 @@ const seedCommentsMany = () => {
   const seed = _.cloneDeep(require('../seeds/comments/many.json'))
   return seeder.seed(seed)
 }
+const seedAll = () =>
+  seedUsersMany()
+  .then(seedArticlesMany)
+  .then(seedCommentsMany)
+
 
 const login = () =>
   seedUsersMany()
@@ -78,7 +83,7 @@ describe('API tests', () => {
       seeder = require('../lib/seeder')
     })
   })
-  beforeEach('clear db', function() {
+  beforeEach('clear db', function () {
     currentTest = this.currentTest
     return seeder.clear()
   })
@@ -89,7 +94,7 @@ describe('API tests', () => {
     .then(snapshotAll)
   )
 
-  it('GET /articles', () =>
+  it.only('GET /articles', () =>
     seedArticlesMany()
     .then(() => seedUsersMany())
     .then(() => request.get('/api/articles').expect(200))
@@ -233,15 +238,15 @@ describe('API tests', () => {
 )
 
 
-it('PUT /user', () =>
+  it('PUT /user', () =>
 loginWithHeaders()
 .then((applyHeaders) => applyHeaders(request.put('/api/user'))
 .send(
   {
-    "user":{
-      "bio": "I like to skateboard",
-      "image": "https://i.stack.imgur.com/xHWG8.jpg"
-    }
+    'user': {
+      'bio': 'I like to skateboard',
+      'image': 'https://i.stack.imgur.com/xHWG8.jpg',
+    },
   }).expect(200))
 .then(snapshotAll)
 )
@@ -266,5 +271,11 @@ loginWithHeaders()
       })
       .expect(200)
       .then(snapshotAll)
+)
+
+it.only('GET /articles?author=jake', () =>
+seedAll()
+.then(() => request.get('/api/articles?author=jake').expect(200))
+.then(snapshotAll)
 )
 })
