@@ -11,12 +11,12 @@ Run api tests:
 npm run server:test
 ```
 
-Start server:
+Start server on port 3000:
 ```
 npm run server:start
 ```
 
-Start client:
+Start client on port 4100:
 ```
 npm start
 ```
