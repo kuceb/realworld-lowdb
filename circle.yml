@@ -1,0 +1,25 @@
+version: 2
+
+jobs:
+  test:
+    parallelism: 1
+    working_directory: ~/app
+    docker:
+      - image: cypress/base:8
+    steps:
+      - checkout
+      - restore_cache:
+          key: app-2-{{ .Branch }}
+      - run: npm install
+      - save_cache:
+          key: app-2-{{ .Branch }}-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+      - run: npm run build
+      - run: npm run server:test
+
+workflows:
+  version: 2
+  test:
+    jobs:
+      - test
