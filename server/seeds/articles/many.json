@@ -1,0 +1,37 @@
+{
+  "articles": [
+    {
+      "title": "Title Article One",
+      "slug": "articleslug-1",
+      "body": "Body Article One",
+      "createdAt": "2016-02-23T20:54:16.969Z",
+      "updatedAt": "2016-02-23T20:54:16.969Z",
+      "tagList": ["tag1", "tag2"],
+      "description": "description article one",
+      "author": "jake",
+      "favoritesCount": 1
+    },
+    {
+      "title": "Title Article Two",
+      "slug": "articleslug-2",
+      "body": "Body Article Two",
+      "createdAt": "2017-02-23T20:54:16.969Z",
+      "updatedAt": "2017-02-23T20:54:16.969Z",
+      "tagList": ["tag2", "tag1"],
+      "description": "description article Two",
+      "author": "joe",
+      "favoritesCount": 1
+    },
+    {
+      "title": "Title Article Three",
+      "slug": "articleslug-3",
+      "body": "Body Article Three",
+      "createdAt": "2018-02-23T20:54:16.969Z",
+      "updatedAt": "2018-02-23T20:54:16.969Z",
+      "tagList": ["tag2", "tag3"],
+      "description": "description article Three",
+      "author": "jim",
+      "favoritesCount": 1
+    }
+  ]
+}

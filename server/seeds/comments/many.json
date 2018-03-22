@@ -1,0 +1,28 @@
+{
+  "comments": [
+    {
+      "id": 1,
+      "createdAt": "2016-02-18T03:22:56.637Z",
+      "updatedAt": "2016-02-18T03:22:56.637Z",
+      "body": "Jake takes a Jacobian",
+      "article": "articleslug-1",
+      "author": "jake"
+    },
+    {
+      "id": 2,
+      "createdAt": "2015-02-18T03:22:56.637Z",
+      "updatedAt": "2015-02-18T03:22:56.637Z",
+      "body": "Jim takes a Jacobian",
+      "article": "articleslug-1",
+      "author": "jim"
+    },
+    {
+      "id": 3,
+      "createdAt": "2014-02-18T03:22:56.637Z",
+      "updatedAt": "2014-02-18T03:22:56.637Z",
+      "body": "Joe takes a Jacobian",
+      "article": "articleslug-1",
+      "author": "joe"
+    }
+  ]
+}
