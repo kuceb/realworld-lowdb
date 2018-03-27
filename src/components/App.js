@@ -15,6 +15,11 @@ import Settings from '../components/Settings';
 import { store } from '../store';
 import { push } from 'react-router-redux';
 
+if (window.Cypress) {
+  window.store = store
+  // console.log(window.Cypress.env("apiUrl"))
+}
+
 const mapStateToProps = state => {
   return {
     appLoaded: state.common.appLoaded,

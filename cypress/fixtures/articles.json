@@ -1,0 +1,64 @@
+{"articles": [
+    {
+      "slug": "articleslug-3",
+      "title": "Title Article Three",
+      "description": "description article Three",
+      "body": "Body Article Three",
+      "createdAt": "2018-02-23T20:54:16.969Z",
+      "updatedAt": "2018-02-23T20:54:16.969Z",
+      "tagList": [
+        "tag2",
+        "tag3"
+      ],
+      "favorited": false,
+      "favoritesCount": 1,
+      "author": {
+        "username": "jim",
+        "bio": "I'm Jim",
+        "image": "https://i.stack.imgur.com/xHWG8.jpg",
+        "following": false
+      }
+    },
+    {
+      "slug": "articleslug-2",
+      "title": "Title Article Two",
+      "description": "description article Two",
+      "body": "Body Article Two",
+      "createdAt": "2017-02-23T20:54:16.969Z",
+      "updatedAt": "2017-02-23T20:54:16.969Z",
+      "tagList": [
+        "tag2",
+        "tag1"
+      ],
+      "favorited": false,
+      "favoritesCount": 1,
+      "author": {
+        "username": "joe",
+        "bio": "I'm Joe",
+        "image": "https://i.stack.imgur.com/xHWG8.jpg",
+        "following": false
+      }
+    },
+    {
+      "slug": "articleslug-1",
+      "title": "Title Article One",
+      "description": "description article one",
+      "body": "Body Article One",
+      "createdAt": "2016-02-23T20:54:16.969Z",
+      "updatedAt": "2016-02-23T20:54:16.969Z",
+      "tagList": [
+        "tag1",
+        "tag2"
+      ],
+      "favorited": false,
+      "favoritesCount": 1,
+      "author": {
+        "username": "jake",
+        "bio": "I'm Jake",
+        "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+        "following": false
+      }
+    }
+  ],
+  "articlesCount": 3
+}

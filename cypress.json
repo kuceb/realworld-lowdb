@@ -1,0 +1,7 @@
+{
+  "baseUrl": "http://localhost:4100",
+  "projectId": "8zsc6y",
+  "env": {
+    "apiUrl" : "http://localhost:3000/api"
+  }
+}
