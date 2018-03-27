@@ -1,15 +1,27 @@
+`
+npm install --save-dev supertest snap-shot-it bluebird lodash
+
+`
+
+
+const _ = require('lodash')
+const Promise = require('bluebird')
 const snapshot = require('snap-shot-it')
 const supertest = require('supertest')
+
 const app = require('../src/app').app
-const _ = require('lodash')
 const request = supertest(app)
 
 let currentTest
-const getTestName = () => currentTest.fullTitle()
-
 let seeder
+
+// get the database for snap shotting
 const yieldDb = () => seeder.read()
 
+// get the current test's name
+const getTestName = () => currentTest.fullTitle()
+
+// cleanse the db of all variable data
 const cleanseDb = (db) => {
   let cleanse = {
     users: ['salt', 'hash'],
@@ -35,10 +47,7 @@ const snapshotAll = (res) =>
   .then(cleanseDb)
   .then((db) => snapshot(`${getTestName()} - DB`, db))
 
-const seedUsersSingle = () => {
-  const seed = _.cloneDeep(require('../seeds/users/single.json'))
-  return seeder.seed({ users: [seed.user] })
-}
+
 const seedUsersMany = () => {
   const seed = _.cloneDeep(require('../seeds/users/many.json'))
   return seeder.seed(seed)
@@ -94,7 +103,7 @@ describe('API tests', () => {
     .then(snapshotAll)
   )
 
-  it.only('GET /articles', () =>
+  it('GET /articles', () =>
     seedArticlesMany()
     .then(() => seedUsersMany())
     .then(() => request.get('/api/articles').expect(200))
@@ -209,7 +218,7 @@ describe('API tests', () => {
   )
 
   it('GET /profiles/:username', () =>
-    seedUsersSingle()
+    seedUsersMany()
     .then((db) => db.users[0].username)
     .then((username) => request.get(`/api/profiles/${username}`).expect(200))
     .then(snapshotAll)
@@ -273,7 +282,7 @@ describe('API tests', () => {
     .then(snapshotAll)
   )
 
-  it.only('GET /articles?author=jake', () =>
+  it('GET /articles?author=jake', () =>
     seedAll()
     .then(() => request.get('/api/articles?author=jake').expect(200))
     .then(snapshotAll)

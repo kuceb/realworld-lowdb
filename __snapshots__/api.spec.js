@@ -1196,6 +1196,26 @@ exports['API tests GET /profiles/:username - DB 1'] = {
       "favorites": false,
       "hash": true,
       "salt": true
+    },
+    {
+      "username": "jim",
+      "email": "jim@jim.jim",
+      "bio": "I'm Jim",
+      "image": "https://i.stack.imgur.com/xHWG8.jpg",
+      "following": false,
+      "favorites": false,
+      "hash": true,
+      "salt": true
+    },
+    {
+      "username": "joe",
+      "email": "joe@joe.joe",
+      "bio": "I'm Joe",
+      "image": "https://i.stack.imgur.com/xHWG8.jpg",
+      "following": false,
+      "favorites": false,
+      "hash": true,
+      "salt": true
     }
   ]
 }
