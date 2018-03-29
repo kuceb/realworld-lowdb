@@ -1,4 +1,5 @@
 const snapshot = require('snap-shot-it')
+const Promise = require('bluebird')
 const supertest = require('supertest')
 const app = require('../src/app').app
 const _ = require('lodash')
@@ -24,16 +25,16 @@ const cleanseDb = (db) => {
       })
       return item
     }
-  )
+    )
   })
   return db
 }
 
 const snapshotAll = (res) =>
-    Promise.resolve(snapshot(`${getTestName()} - res.body`, res.body))
-    .then(yieldDb)
-    .then(cleanseDb)
-    .then((db) => snapshot(`${getTestName()} - DB`, db))
+  Promise.resolve(snapshot(`${getTestName()} - res.body`, res.body))
+  .then(yieldDb)
+  .then(cleanseDb)
+  .then((db) => snapshot(`${getTestName()} - DB`, db))
 
 const seedUsersSingle = () => {
   const seed = _.cloneDeep(require('../seeds/users/single.json'))
@@ -61,16 +62,16 @@ const login = () =>
   seedUsersMany()
   .then(() => seedArticlesMany())
   .then(() =>
-      request
-      .post('/api/users/login')
-      .send({
-        user: {
-          email: 'jake@jake.jake',
-          password: 'jakejake',
-        },
-      })
-      .expect(200)
-    )
+    request
+    .post('/api/users/login')
+    .send({
+      user: {
+        email: 'jake@jake.jake',
+        password: 'jakejake',
+      },
+    })
+    .expect(200)
+  )
 
 const loginWithHeaders = () =>
   login()
@@ -94,7 +95,7 @@ describe('API tests', () => {
     .then(snapshotAll)
   )
 
-  it.only('GET /articles', () =>
+  it('GET /articles', () =>
     seedArticlesMany()
     .then(() => seedUsersMany())
     .then(() => request.get('/api/articles').expect(200))
@@ -102,17 +103,17 @@ describe('API tests', () => {
   )
 
   it('PUT /articles/:article', () =>
-  loginWithHeaders()
-  .then((applyHeaders) => applyHeaders(request.put('/api/articles/articleslug-1'))
-  .send(
-    {
-      'article': {
-        'title': 'Did you train your dragon?',
-      },
-    }
-  ).expect(200))
-  .then(snapshotAll)
-)
+    loginWithHeaders()
+    .then((applyHeaders) => applyHeaders(request.put('/api/articles/articleslug-1'))
+    .send(
+      {
+        'article': {
+          'title': 'Did you train your dragon?',
+        },
+      }
+    ).expect(200))
+    .then(snapshotAll)
+  )
 
   it('GET /articles/:article', () =>
     seedArticlesMany()
@@ -125,8 +126,8 @@ describe('API tests', () => {
   it('GET /feed with auth', () =>
     loginWithHeaders()
     .then((applyHeaders) =>
-        applyHeaders(request.get('/api/articles/feed')).expect(200)
-      )
+      applyHeaders(request.get('/api/articles/feed')).expect(200)
+    )
     .then(snapshotAll)
   )
 
@@ -136,14 +137,14 @@ describe('API tests', () => {
   it('POST /:article/comments', () =>
     loginWithHeaders()
     .then((applyHeaders) =>
-        applyHeaders(request.post('/api/articles/articleslug-1/comments'))
-        .send({
-          comment: {
-            body: 'POST test comment',
-          },
-        })
-        .expect(200)
-      )
+      applyHeaders(request.post('/api/articles/articleslug-1/comments'))
+      .send({
+        comment: {
+          body: 'POST test comment',
+        },
+      })
+      .expect(200)
+    )
     .then((res) => {
       res.body.comment.id = !!res.body.comment.id
       return res
@@ -154,37 +155,37 @@ describe('API tests', () => {
   it('POST /articles', () =>
     loginWithHeaders()
     .then((applyHeaders) =>
-        applyHeaders(request.post('/api/articles'))
-        .send({
-          article: {
-            title: 'How to train your dragon',
-            description: 'Ever wonder how?',
-            body: 'You have to believe',
-            tagList: ['reactjs', 'angularjs', 'dragons'],
-          },
-        })
-        .expect(200)
-      )
+      applyHeaders(request.post('/api/articles'))
+      .send({
+        article: {
+          title: 'How to train your dragon',
+          description: 'Ever wonder how?',
+          body: 'You have to believe',
+          tagList: ['reactjs', 'angularjs', 'dragons'],
+        },
+      })
+      .expect(200)
+    )
     .then(snapshotAll)
   )
 
   it('POST /articles/:article/favorite', () =>
     loginWithHeaders()
     .then((applyHeaders) =>
-        applyHeaders(
-          request.post('/api/articles/articleslug-1/favorite')
-        ).expect(200)
-      )
+      applyHeaders(
+        request.post('/api/articles/articleslug-1/favorite')
+      ).expect(200)
+    )
     .then(snapshotAll)
   )
 
   it('DELETE /articles/:article/favorite', () =>
     loginWithHeaders()
     .then((applyHeaders) =>
-        applyHeaders(
-          request.delete('/api/articles/articleslug-1/favorite')
-        ).expect(200)
-      )
+      applyHeaders(
+        request.delete('/api/articles/articleslug-1/favorite')
+      ).expect(200)
+    )
     .then(snapshotAll)
   )
 
@@ -201,10 +202,10 @@ describe('API tests', () => {
     seedCommentsMany()
     .then(() => loginWithHeaders())
     .then((applyHeaders) =>
-        applyHeaders(
-          request.delete('/api/articles/articleslug-1/comments/1')
-        ).expect(204)
-      )
+      applyHeaders(
+        request.delete('/api/articles/articleslug-1/comments/1')
+      ).expect(204)
+    )
     .then(snapshotAll)
   )
 
@@ -218,16 +219,16 @@ describe('API tests', () => {
   it('POST /profiles/:username/follow', () =>
     loginWithHeaders()
     .then((applyHeaders) =>
-        applyHeaders(request.post('/api/profiles/jake/follow')).expect(200)
-      )
+      applyHeaders(request.post('/api/profiles/jake/follow')).expect(200)
+    )
     .then(snapshotAll)
   )
 
   it('DELETE /profiles/:username/follow', () =>
     loginWithHeaders()
     .then((applyHeaders) =>
-        applyHeaders(request.delete('/api/profiles/jake/follow')).expect(200)
-      )
+      applyHeaders(request.delete('/api/profiles/jake/follow')).expect(200)
+    )
     .then(snapshotAll)
   )
 
@@ -235,21 +236,21 @@ describe('API tests', () => {
     loginWithHeaders()
     .then((applyHeaders) => applyHeaders(request.get('/api/user')).expect(200))
     .then(snapshotAll)
-)
+  )
 
 
   it('PUT /user', () =>
-loginWithHeaders()
-.then((applyHeaders) => applyHeaders(request.put('/api/user'))
-.send(
-  {
-    'user': {
-      'bio': 'I like to skateboard',
-      'image': 'https://i.stack.imgur.com/xHWG8.jpg',
-    },
-  }).expect(200))
-.then(snapshotAll)
-)
+    loginWithHeaders()
+    .then((applyHeaders) => applyHeaders(request.put('/api/user'))
+    .send(
+      {
+        'user': {
+          'bio': 'I like to skateboard',
+          'image': 'https://i.stack.imgur.com/xHWG8.jpg',
+        },
+      }).expect(200))
+    .then(snapshotAll)
+  )
 
   it('POST /users/login', () =>
     login()
@@ -261,21 +262,21 @@ loginWithHeaders()
   )
 
   it('POST /users', () =>
-      request.post('/api/users')
-      .send({
-        'user': {
-          'username': 'John',
-          'email': 'john@john.john',
-          'password': 'newpass123',
-        },
-      })
-      .expect(200)
-      .then(snapshotAll)
-)
+    request.post('/api/users')
+    .send({
+      'user': {
+        'username': 'John',
+        'email': 'john@john.john',
+        'password': 'newpass123',
+      },
+    })
+    .expect(200)
+    .then(snapshotAll)
+  )
 
-it.only('GET /articles?author=jake', () =>
-seedAll()
-.then(() => request.get('/api/articles?author=jake').expect(200))
-.then(snapshotAll)
-)
+  it('GET /articles?author=jake', () =>
+    seedAll()
+    .then(() => request.get('/api/articles?author=jake').expect(200))
+    .then(snapshotAll)
+  )
 })
