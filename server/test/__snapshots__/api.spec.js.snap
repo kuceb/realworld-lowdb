@@ -1,0 +1,1882 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`API tests DELETE /:article/comments/:comment: DB 1`] = `
+Object {
+  "articles": Array [
+    Object {
+      "author": "jake",
+      "body": "Body Article One",
+      "createdAt": "2016-02-23T20:54:16.969Z",
+      "description": "description article one",
+      "favoritesCount": 1,
+      "slug": "articleslug-1",
+      "tagList": Array [
+        "tag1",
+        "tag2",
+      ],
+      "title": "Title Article One",
+      "updatedAt": "2016-02-23T20:54:16.969Z",
+    },
+    Object {
+      "author": "joe",
+      "body": "Body Article Two",
+      "createdAt": "2017-02-23T20:54:16.969Z",
+      "description": "description article Two",
+      "favoritesCount": 1,
+      "slug": "articleslug-2",
+      "tagList": Array [
+        "tag2",
+        "tag1",
+      ],
+      "title": "Title Article Two",
+      "updatedAt": "2017-02-23T20:54:16.969Z",
+    },
+    Object {
+      "author": "jim",
+      "body": "Body Article Three",
+      "createdAt": "2018-02-23T20:54:16.969Z",
+      "description": "description article Three",
+      "favoritesCount": 1,
+      "slug": "articleslug-3",
+      "tagList": Array [
+        "tag2",
+        "tag3",
+      ],
+      "title": "Title Article Three",
+      "updatedAt": "2018-02-23T20:54:16.969Z",
+    },
+  ],
+  "comments": Array [
+    Object {
+      "article": "articleslug-1",
+      "author": "jake",
+      "body": "Jake takes a Jacobian",
+      "createdAt": "2016-02-18T03:22:56.637Z",
+      "id": true,
+      "updatedAt": "2016-02-18T03:22:56.637Z",
+    },
+    Object {
+      "article": "articleslug-1",
+      "author": "jim",
+      "body": "Jim takes a Jacobian",
+      "createdAt": "2015-02-18T03:22:56.637Z",
+      "id": true,
+      "updatedAt": "2015-02-18T03:22:56.637Z",
+    },
+    Object {
+      "article": "articleslug-1",
+      "author": "joe",
+      "body": "Joe takes a Jacobian",
+      "createdAt": "2014-02-18T03:22:56.637Z",
+      "id": true,
+      "updatedAt": "2014-02-18T03:22:56.637Z",
+    },
+  ],
+  "users": Array [
+    Object {
+      "bio": "I'm Jake",
+      "email": "jake@jake.jake",
+      "favorites": false,
+      "following": false,
+      "hash": true,
+      "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+      "salt": true,
+      "username": "jake",
+    },
+    Object {
+      "bio": "I'm Jim",
+      "email": "jim@jim.jim",
+      "favorites": false,
+      "following": false,
+      "hash": true,
+      "image": "https://i.stack.imgur.com/xHWG8.jpg",
+      "salt": true,
+      "username": "jim",
+    },
+    Object {
+      "bio": "I'm Joe",
+      "email": "joe@joe.joe",
+      "favorites": false,
+      "following": false,
+      "hash": true,
+      "image": "https://i.stack.imgur.com/xHWG8.jpg",
+      "salt": true,
+      "username": "joe",
+    },
+  ],
+}
+`;
+
+exports[`API tests DELETE /:article/comments/:comment: response 1`] = `Object {}`;
+
+exports[`API tests DELETE /articles/:article/favorite: DB 1`] = `
+Object {
+  "articles": Array [
+    Object {
+      "author": "jake",
+      "body": "Body Article One",
+      "createdAt": "2016-02-23T20:54:16.969Z",
+      "description": "description article one",
+      "favorited": false,
+      "favoritesCount": 0,
+      "slug": "articleslug-1",
+      "tagList": Array [
+        "tag1",
+        "tag2",
+      ],
+      "title": "Title Article One",
+      "updatedAt": "2016-02-23T20:54:16.969Z",
+    },
+    Object {
+      "author": "joe",
+      "body": "Body Article Two",
+      "createdAt": "2017-02-23T20:54:16.969Z",
+      "description": "description article Two",
+      "favoritesCount": 1,
+      "slug": "articleslug-2",
+      "tagList": Array [
+        "tag2",
+        "tag1",
+      ],
+      "title": "Title Article Two",
+      "updatedAt": "2017-02-23T20:54:16.969Z",
+    },
+    Object {
+      "author": "jim",
+      "body": "Body Article Three",
+      "createdAt": "2018-02-23T20:54:16.969Z",
+      "description": "description article Three",
+      "favoritesCount": 1,
+      "slug": "articleslug-3",
+      "tagList": Array [
+        "tag2",
+        "tag3",
+      ],
+      "title": "Title Article Three",
+      "updatedAt": "2018-02-23T20:54:16.969Z",
+    },
+  ],
+  "comments": Array [],
+  "users": Array [
+    Object {
+      "bio": "I'm Jake",
+      "email": "jake@jake.jake",
+      "favorites": false,
+      "following": false,
+      "hash": true,
+      "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+      "salt": true,
+      "username": "jake",
+    },
+    Object {
+      "bio": "I'm Jim",
+      "email": "jim@jim.jim",
+      "favorites": false,
+      "following": false,
+      "hash": true,
+      "image": "https://i.stack.imgur.com/xHWG8.jpg",
+      "salt": true,
+      "username": "jim",
+    },
+    Object {
+      "bio": "I'm Joe",
+      "email": "joe@joe.joe",
+      "favorites": false,
+      "following": false,
+      "hash": true,
+      "image": "https://i.stack.imgur.com/xHWG8.jpg",
+      "salt": true,
+      "username": "joe",
+    },
+  ],
+}
+`;
+
+exports[`API tests DELETE /articles/:article/favorite: response 1`] = `
+Object {
+  "article": Object {
+    "author": Object {
+      "bio": "I'm Jake",
+      "following": false,
+      "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+      "username": "jake",
+    },
+    "body": "Body Article One",
+    "createdAt": "2016-02-23T20:54:16.969Z",
+    "description": "description article one",
+    "favorited": false,
+    "favoritesCount": 0,
+    "slug": "articleslug-1",
+    "tagList": Array [
+      "tag1",
+      "tag2",
+    ],
+    "title": "Title Article One",
+    "updatedAt": "2016-02-23T20:54:16.969Z",
+  },
+}
+`;
+
+exports[`API tests DELETE /profiles/:username/follow: DB 1`] = `
+Object {
+  "articles": Array [
+    Object {
+      "author": "jake",
+      "body": "Body Article One",
+      "createdAt": "2016-02-23T20:54:16.969Z",
+      "description": "description article one",
+      "favoritesCount": 1,
+      "slug": "articleslug-1",
+      "tagList": Array [
+        "tag1",
+        "tag2",
+      ],
+      "title": "Title Article One",
+      "updatedAt": "2016-02-23T20:54:16.969Z",
+    },
+    Object {
+      "author": "joe",
+      "body": "Body Article Two",
+      "createdAt": "2017-02-23T20:54:16.969Z",
+      "description": "description article Two",
+      "favoritesCount": 1,
+      "slug": "articleslug-2",
+      "tagList": Array [
+        "tag2",
+        "tag1",
+      ],
+      "title": "Title Article Two",
+      "updatedAt": "2017-02-23T20:54:16.969Z",
+    },
+    Object {
+      "author": "jim",
+      "body": "Body Article Three",
+      "createdAt": "2018-02-23T20:54:16.969Z",
+      "description": "description article Three",
+      "favoritesCount": 1,
+      "slug": "articleslug-3",
+      "tagList": Array [
+        "tag2",
+        "tag3",
+      ],
+      "title": "Title Article Three",
+      "updatedAt": "2018-02-23T20:54:16.969Z",
+    },
+  ],
+  "comments": Array [],
+  "users": Array [
+    Object {
+      "bio": "I'm Jake",
+      "email": "jake@jake.jake",
+      "favorites": false,
+      "following": false,
+      "hash": true,
+      "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+      "salt": true,
+      "username": "jake",
+    },
+    Object {
+      "bio": "I'm Jim",
+      "email": "jim@jim.jim",
+      "favorites": false,
+      "following": false,
+      "hash": true,
+      "image": "https://i.stack.imgur.com/xHWG8.jpg",
+      "salt": true,
+      "username": "jim",
+    },
+    Object {
+      "bio": "I'm Joe",
+      "email": "joe@joe.joe",
+      "favorites": false,
+      "following": false,
+      "hash": true,
+      "image": "https://i.stack.imgur.com/xHWG8.jpg",
+      "salt": true,
+      "username": "joe",
+    },
+  ],
+}
+`;
+
+exports[`API tests DELETE /profiles/:username/follow: response 1`] = `
+Object {
+  "profile": Object {
+    "bio": "I'm Jake",
+    "following": false,
+    "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+    "username": "jake",
+  },
+}
+`;
+
+exports[`API tests GET /articles/:article/comments: DB 1`] = `
+Object {
+  "articles": Array [
+    Object {
+      "author": "jake",
+      "body": "Body Article One",
+      "createdAt": "2016-02-23T20:54:16.969Z",
+      "description": "description article one",
+      "favoritesCount": 1,
+      "slug": "articleslug-1",
+      "tagList": Array [
+        "tag1",
+        "tag2",
+      ],
+      "title": "Title Article One",
+      "updatedAt": "2016-02-23T20:54:16.969Z",
+    },
+    Object {
+      "author": "joe",
+      "body": "Body Article Two",
+      "createdAt": "2017-02-23T20:54:16.969Z",
+      "description": "description article Two",
+      "favoritesCount": 1,
+      "slug": "articleslug-2",
+      "tagList": Array [
+        "tag2",
+        "tag1",
+      ],
+      "title": "Title Article Two",
+      "updatedAt": "2017-02-23T20:54:16.969Z",
+    },
+    Object {
+      "author": "jim",
+      "body": "Body Article Three",
+      "createdAt": "2018-02-23T20:54:16.969Z",
+      "description": "description article Three",
+      "favoritesCount": 1,
+      "slug": "articleslug-3",
+      "tagList": Array [
+        "tag2",
+        "tag3",
+      ],
+      "title": "Title Article Three",
+      "updatedAt": "2018-02-23T20:54:16.969Z",
+    },
+  ],
+  "comments": Array [
+    Object {
+      "article": "articleslug-1",
+      "author": "jake",
+      "body": "Jake takes a Jacobian",
+      "createdAt": "2016-02-18T03:22:56.637Z",
+      "id": true,
+      "updatedAt": "2016-02-18T03:22:56.637Z",
+    },
+    Object {
+      "article": "articleslug-1",
+      "author": "jim",
+      "body": "Jim takes a Jacobian",
+      "createdAt": "2015-02-18T03:22:56.637Z",
+      "id": true,
+      "updatedAt": "2015-02-18T03:22:56.637Z",
+    },
+    Object {
+      "article": "articleslug-1",
+      "author": "joe",
+      "body": "Joe takes a Jacobian",
+      "createdAt": "2014-02-18T03:22:56.637Z",
+      "id": true,
+      "updatedAt": "2014-02-18T03:22:56.637Z",
+    },
+  ],
+  "users": Array [
+    Object {
+      "bio": "I'm Jake",
+      "email": "jake@jake.jake",
+      "favorites": false,
+      "following": false,
+      "hash": true,
+      "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+      "salt": true,
+      "username": "jake",
+    },
+    Object {
+      "bio": "I'm Jim",
+      "email": "jim@jim.jim",
+      "favorites": false,
+      "following": false,
+      "hash": true,
+      "image": "https://i.stack.imgur.com/xHWG8.jpg",
+      "salt": true,
+      "username": "jim",
+    },
+    Object {
+      "bio": "I'm Joe",
+      "email": "joe@joe.joe",
+      "favorites": false,
+      "following": false,
+      "hash": true,
+      "image": "https://i.stack.imgur.com/xHWG8.jpg",
+      "salt": true,
+      "username": "joe",
+    },
+  ],
+}
+`;
+
+exports[`API tests GET /articles/:article/comments: response 1`] = `
+Object {
+  "comments": Array [
+    Object {
+      "author": Object {
+        "bio": "I'm Jake",
+        "following": false,
+        "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+        "username": "jake",
+      },
+      "body": "Jake takes a Jacobian",
+      "createdAt": "2016-02-18T03:22:56.637Z",
+      "id": 1,
+      "updatedAt": "2016-02-18T03:22:56.637Z",
+    },
+    Object {
+      "author": Object {
+        "bio": "I'm Jim",
+        "following": false,
+        "image": "https://i.stack.imgur.com/xHWG8.jpg",
+        "username": "jim",
+      },
+      "body": "Jim takes a Jacobian",
+      "createdAt": "2015-02-18T03:22:56.637Z",
+      "id": 2,
+      "updatedAt": "2015-02-18T03:22:56.637Z",
+    },
+    Object {
+      "author": Object {
+        "bio": "I'm Joe",
+        "following": false,
+        "image": "https://i.stack.imgur.com/xHWG8.jpg",
+        "username": "joe",
+      },
+      "body": "Joe takes a Jacobian",
+      "createdAt": "2014-02-18T03:22:56.637Z",
+      "id": 3,
+      "updatedAt": "2014-02-18T03:22:56.637Z",
+    },
+  ],
+}
+`;
+
+exports[`API tests GET /articles/:article: DB 1`] = `
+Object {
+  "articles": Array [
+    Object {
+      "author": "jake",
+      "body": "Body Article One",
+      "createdAt": "2016-02-23T20:54:16.969Z",
+      "description": "description article one",
+      "favoritesCount": 1,
+      "slug": "articleslug-1",
+      "tagList": Array [
+        "tag1",
+        "tag2",
+      ],
+      "title": "Title Article One",
+      "updatedAt": "2016-02-23T20:54:16.969Z",
+    },
+    Object {
+      "author": "joe",
+      "body": "Body Article Two",
+      "createdAt": "2017-02-23T20:54:16.969Z",
+      "description": "description article Two",
+      "favoritesCount": 1,
+      "slug": "articleslug-2",
+      "tagList": Array [
+        "tag2",
+        "tag1",
+      ],
+      "title": "Title Article Two",
+      "updatedAt": "2017-02-23T20:54:16.969Z",
+    },
+    Object {
+      "author": "jim",
+      "body": "Body Article Three",
+      "createdAt": "2018-02-23T20:54:16.969Z",
+      "description": "description article Three",
+      "favoritesCount": 1,
+      "slug": "articleslug-3",
+      "tagList": Array [
+        "tag2",
+        "tag3",
+      ],
+      "title": "Title Article Three",
+      "updatedAt": "2018-02-23T20:54:16.969Z",
+    },
+  ],
+  "comments": Array [],
+  "users": Array [
+    Object {
+      "bio": "I'm Jake",
+      "email": "jake@jake.jake",
+      "favorites": false,
+      "following": false,
+      "hash": true,
+      "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+      "salt": true,
+      "username": "jake",
+    },
+    Object {
+      "bio": "I'm Jim",
+      "email": "jim@jim.jim",
+      "favorites": false,
+      "following": false,
+      "hash": true,
+      "image": "https://i.stack.imgur.com/xHWG8.jpg",
+      "salt": true,
+      "username": "jim",
+    },
+    Object {
+      "bio": "I'm Joe",
+      "email": "joe@joe.joe",
+      "favorites": false,
+      "following": false,
+      "hash": true,
+      "image": "https://i.stack.imgur.com/xHWG8.jpg",
+      "salt": true,
+      "username": "joe",
+    },
+  ],
+}
+`;
+
+exports[`API tests GET /articles/:article: response 1`] = `
+Object {
+  "article": Object {
+    "author": Object {
+      "bio": "I'm Jake",
+      "following": false,
+      "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+      "username": "jake",
+    },
+    "body": "Body Article One",
+    "createdAt": "2016-02-23T20:54:16.969Z",
+    "description": "description article one",
+    "favorited": false,
+    "favoritesCount": 1,
+    "slug": "articleslug-1",
+    "tagList": Array [
+      "tag1",
+      "tag2",
+    ],
+    "title": "Title Article One",
+    "updatedAt": "2016-02-23T20:54:16.969Z",
+  },
+}
+`;
+
+exports[`API tests GET /articles: DB 1`] = `
+Object {
+  "articles": Array [
+    Object {
+      "author": "jake",
+      "body": "Body Article One",
+      "createdAt": "2016-02-23T20:54:16.969Z",
+      "description": "description article one",
+      "favoritesCount": 1,
+      "slug": "articleslug-1",
+      "tagList": Array [
+        "tag1",
+        "tag2",
+      ],
+      "title": "Title Article One",
+      "updatedAt": "2016-02-23T20:54:16.969Z",
+    },
+    Object {
+      "author": "joe",
+      "body": "Body Article Two",
+      "createdAt": "2017-02-23T20:54:16.969Z",
+      "description": "description article Two",
+      "favoritesCount": 1,
+      "slug": "articleslug-2",
+      "tagList": Array [
+        "tag2",
+        "tag1",
+      ],
+      "title": "Title Article Two",
+      "updatedAt": "2017-02-23T20:54:16.969Z",
+    },
+    Object {
+      "author": "jim",
+      "body": "Body Article Three",
+      "createdAt": "2018-02-23T20:54:16.969Z",
+      "description": "description article Three",
+      "favoritesCount": 1,
+      "slug": "articleslug-3",
+      "tagList": Array [
+        "tag2",
+        "tag3",
+      ],
+      "title": "Title Article Three",
+      "updatedAt": "2018-02-23T20:54:16.969Z",
+    },
+  ],
+  "comments": Array [],
+  "users": Array [
+    Object {
+      "bio": "I'm Jake",
+      "email": "jake@jake.jake",
+      "favorites": false,
+      "following": false,
+      "hash": true,
+      "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+      "salt": true,
+      "username": "jake",
+    },
+    Object {
+      "bio": "I'm Jim",
+      "email": "jim@jim.jim",
+      "favorites": false,
+      "following": false,
+      "hash": true,
+      "image": "https://i.stack.imgur.com/xHWG8.jpg",
+      "salt": true,
+      "username": "jim",
+    },
+    Object {
+      "bio": "I'm Joe",
+      "email": "joe@joe.joe",
+      "favorites": false,
+      "following": false,
+      "hash": true,
+      "image": "https://i.stack.imgur.com/xHWG8.jpg",
+      "salt": true,
+      "username": "joe",
+    },
+  ],
+}
+`;
+
+exports[`API tests GET /articles: response 1`] = `
+Object {
+  "articles": Array [
+    Object {
+      "author": Object {
+        "bio": "I'm Jim",
+        "following": false,
+        "image": "https://i.stack.imgur.com/xHWG8.jpg",
+        "username": "jim",
+      },
+      "body": "Body Article Three",
+      "createdAt": "2018-02-23T20:54:16.969Z",
+      "description": "description article Three",
+      "favorited": false,
+      "favoritesCount": 1,
+      "slug": "articleslug-3",
+      "tagList": Array [
+        "tag2",
+        "tag3",
+      ],
+      "title": "Title Article Three",
+      "updatedAt": "2018-02-23T20:54:16.969Z",
+    },
+    Object {
+      "author": Object {
+        "bio": "I'm Joe",
+        "following": false,
+        "image": "https://i.stack.imgur.com/xHWG8.jpg",
+        "username": "joe",
+      },
+      "body": "Body Article Two",
+      "createdAt": "2017-02-23T20:54:16.969Z",
+      "description": "description article Two",
+      "favorited": false,
+      "favoritesCount": 1,
+      "slug": "articleslug-2",
+      "tagList": Array [
+        "tag2",
+        "tag1",
+      ],
+      "title": "Title Article Two",
+      "updatedAt": "2017-02-23T20:54:16.969Z",
+    },
+    Object {
+      "author": Object {
+        "bio": "I'm Jake",
+        "following": false,
+        "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+        "username": "jake",
+      },
+      "body": "Body Article One",
+      "createdAt": "2016-02-23T20:54:16.969Z",
+      "description": "description article one",
+      "favorited": false,
+      "favoritesCount": 1,
+      "slug": "articleslug-1",
+      "tagList": Array [
+        "tag1",
+        "tag2",
+      ],
+      "title": "Title Article One",
+      "updatedAt": "2016-02-23T20:54:16.969Z",
+    },
+  ],
+  "articlesCount": 3,
+}
+`;
+
+exports[`API tests GET /articles?author=jake: DB 1`] = `
+Object {
+  "articles": Array [
+    Object {
+      "author": "jake",
+      "body": "Body Article One",
+      "createdAt": "2016-02-23T20:54:16.969Z",
+      "description": "description article one",
+      "favoritesCount": 1,
+      "slug": "articleslug-1",
+      "tagList": Array [
+        "tag1",
+        "tag2",
+      ],
+      "title": "Title Article One",
+      "updatedAt": "2016-02-23T20:54:16.969Z",
+    },
+    Object {
+      "author": "joe",
+      "body": "Body Article Two",
+      "createdAt": "2017-02-23T20:54:16.969Z",
+      "description": "description article Two",
+      "favoritesCount": 1,
+      "slug": "articleslug-2",
+      "tagList": Array [
+        "tag2",
+        "tag1",
+      ],
+      "title": "Title Article Two",
+      "updatedAt": "2017-02-23T20:54:16.969Z",
+    },
+    Object {
+      "author": "jim",
+      "body": "Body Article Three",
+      "createdAt": "2018-02-23T20:54:16.969Z",
+      "description": "description article Three",
+      "favoritesCount": 1,
+      "slug": "articleslug-3",
+      "tagList": Array [
+        "tag2",
+        "tag3",
+      ],
+      "title": "Title Article Three",
+      "updatedAt": "2018-02-23T20:54:16.969Z",
+    },
+  ],
+  "comments": Array [
+    Object {
+      "article": "articleslug-1",
+      "author": "jake",
+      "body": "Jake takes a Jacobian",
+      "createdAt": "2016-02-18T03:22:56.637Z",
+      "id": true,
+      "updatedAt": "2016-02-18T03:22:56.637Z",
+    },
+    Object {
+      "article": "articleslug-1",
+      "author": "jim",
+      "body": "Jim takes a Jacobian",
+      "createdAt": "2015-02-18T03:22:56.637Z",
+      "id": true,
+      "updatedAt": "2015-02-18T03:22:56.637Z",
+    },
+    Object {
+      "article": "articleslug-1",
+      "author": "joe",
+      "body": "Joe takes a Jacobian",
+      "createdAt": "2014-02-18T03:22:56.637Z",
+      "id": true,
+      "updatedAt": "2014-02-18T03:22:56.637Z",
+    },
+  ],
+  "users": Array [
+    Object {
+      "bio": "I'm Jake",
+      "email": "jake@jake.jake",
+      "favorites": false,
+      "following": false,
+      "hash": true,
+      "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+      "salt": true,
+      "username": "jake",
+    },
+    Object {
+      "bio": "I'm Jim",
+      "email": "jim@jim.jim",
+      "favorites": false,
+      "following": false,
+      "hash": true,
+      "image": "https://i.stack.imgur.com/xHWG8.jpg",
+      "salt": true,
+      "username": "jim",
+    },
+    Object {
+      "bio": "I'm Joe",
+      "email": "joe@joe.joe",
+      "favorites": false,
+      "following": false,
+      "hash": true,
+      "image": "https://i.stack.imgur.com/xHWG8.jpg",
+      "salt": true,
+      "username": "joe",
+    },
+  ],
+}
+`;
+
+exports[`API tests GET /articles?author=jake: response 1`] = `
+Object {
+  "articles": Array [
+    Object {
+      "author": Object {
+        "bio": "I'm Jake",
+        "following": false,
+        "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+        "username": "jake",
+      },
+      "body": "Body Article One",
+      "createdAt": "2016-02-23T20:54:16.969Z",
+      "description": "description article one",
+      "favorited": false,
+      "favoritesCount": 1,
+      "slug": "articleslug-1",
+      "tagList": Array [
+        "tag1",
+        "tag2",
+      ],
+      "title": "Title Article One",
+      "updatedAt": "2016-02-23T20:54:16.969Z",
+    },
+  ],
+  "articlesCount": 1,
+}
+`;
+
+exports[`API tests GET /feed with auth: DB 1`] = `
+Object {
+  "articles": Array [
+    Object {
+      "author": "jake",
+      "body": "Body Article One",
+      "createdAt": "2016-02-23T20:54:16.969Z",
+      "description": "description article one",
+      "favoritesCount": 1,
+      "slug": "articleslug-1",
+      "tagList": Array [
+        "tag1",
+        "tag2",
+      ],
+      "title": "Title Article One",
+      "updatedAt": "2016-02-23T20:54:16.969Z",
+    },
+    Object {
+      "author": "joe",
+      "body": "Body Article Two",
+      "createdAt": "2017-02-23T20:54:16.969Z",
+      "description": "description article Two",
+      "favoritesCount": 1,
+      "slug": "articleslug-2",
+      "tagList": Array [
+        "tag2",
+        "tag1",
+      ],
+      "title": "Title Article Two",
+      "updatedAt": "2017-02-23T20:54:16.969Z",
+    },
+    Object {
+      "author": "jim",
+      "body": "Body Article Three",
+      "createdAt": "2018-02-23T20:54:16.969Z",
+      "description": "description article Three",
+      "favoritesCount": 1,
+      "slug": "articleslug-3",
+      "tagList": Array [
+        "tag2",
+        "tag3",
+      ],
+      "title": "Title Article Three",
+      "updatedAt": "2018-02-23T20:54:16.969Z",
+    },
+  ],
+  "comments": Array [],
+  "users": Array [
+    Object {
+      "bio": "I'm Jake",
+      "email": "jake@jake.jake",
+      "favorites": false,
+      "following": false,
+      "hash": true,
+      "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+      "salt": true,
+      "username": "jake",
+    },
+    Object {
+      "bio": "I'm Jim",
+      "email": "jim@jim.jim",
+      "favorites": false,
+      "following": false,
+      "hash": true,
+      "image": "https://i.stack.imgur.com/xHWG8.jpg",
+      "salt": true,
+      "username": "jim",
+    },
+    Object {
+      "bio": "I'm Joe",
+      "email": "joe@joe.joe",
+      "favorites": false,
+      "following": false,
+      "hash": true,
+      "image": "https://i.stack.imgur.com/xHWG8.jpg",
+      "salt": true,
+      "username": "joe",
+    },
+  ],
+}
+`;
+
+exports[`API tests GET /feed with auth: response 1`] = `
+Object {
+  "articles": Array [],
+  "articlesCount": 0,
+}
+`;
+
+exports[`API tests GET /profiles/:username: DB 1`] = `
+Object {
+  "articles": Array [],
+  "comments": Array [],
+  "users": Array [
+    Object {
+      "bio": "I'm Jake",
+      "email": "jake@jake.jake",
+      "favorites": false,
+      "following": false,
+      "hash": true,
+      "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+      "salt": true,
+      "username": "jake",
+    },
+  ],
+}
+`;
+
+exports[`API tests GET /profiles/:username: response 1`] = `
+Object {
+  "profile": Object {
+    "bio": "I'm Jake",
+    "following": false,
+    "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+    "username": "jake",
+  },
+}
+`;
+
+exports[`API tests GET /tags: DB 1`] = `
+Object {
+  "articles": Array [
+    Object {
+      "author": "jake",
+      "body": "Body Article One",
+      "createdAt": "2016-02-23T20:54:16.969Z",
+      "description": "description article one",
+      "favoritesCount": 1,
+      "slug": "articleslug-1",
+      "tagList": Array [
+        "tag1",
+        "tag2",
+      ],
+      "title": "Title Article One",
+      "updatedAt": "2016-02-23T20:54:16.969Z",
+    },
+    Object {
+      "author": "joe",
+      "body": "Body Article Two",
+      "createdAt": "2017-02-23T20:54:16.969Z",
+      "description": "description article Two",
+      "favoritesCount": 1,
+      "slug": "articleslug-2",
+      "tagList": Array [
+        "tag2",
+        "tag1",
+      ],
+      "title": "Title Article Two",
+      "updatedAt": "2017-02-23T20:54:16.969Z",
+    },
+    Object {
+      "author": "jim",
+      "body": "Body Article Three",
+      "createdAt": "2018-02-23T20:54:16.969Z",
+      "description": "description article Three",
+      "favoritesCount": 1,
+      "slug": "articleslug-3",
+      "tagList": Array [
+        "tag2",
+        "tag3",
+      ],
+      "title": "Title Article Three",
+      "updatedAt": "2018-02-23T20:54:16.969Z",
+    },
+  ],
+  "comments": Array [],
+  "users": Array [],
+}
+`;
+
+exports[`API tests GET /tags: response 1`] = `
+Object {
+  "tags": Array [
+    "tag1",
+    "tag2",
+    "tag3",
+  ],
+}
+`;
+
+exports[`API tests GET /user: DB 1`] = `
+Object {
+  "articles": Array [
+    Object {
+      "author": "jake",
+      "body": "Body Article One",
+      "createdAt": "2016-02-23T20:54:16.969Z",
+      "description": "description article one",
+      "favoritesCount": 1,
+      "slug": "articleslug-1",
+      "tagList": Array [
+        "tag1",
+        "tag2",
+      ],
+      "title": "Title Article One",
+      "updatedAt": "2016-02-23T20:54:16.969Z",
+    },
+    Object {
+      "author": "joe",
+      "body": "Body Article Two",
+      "createdAt": "2017-02-23T20:54:16.969Z",
+      "description": "description article Two",
+      "favoritesCount": 1,
+      "slug": "articleslug-2",
+      "tagList": Array [
+        "tag2",
+        "tag1",
+      ],
+      "title": "Title Article Two",
+      "updatedAt": "2017-02-23T20:54:16.969Z",
+    },
+    Object {
+      "author": "jim",
+      "body": "Body Article Three",
+      "createdAt": "2018-02-23T20:54:16.969Z",
+      "description": "description article Three",
+      "favoritesCount": 1,
+      "slug": "articleslug-3",
+      "tagList": Array [
+        "tag2",
+        "tag3",
+      ],
+      "title": "Title Article Three",
+      "updatedAt": "2018-02-23T20:54:16.969Z",
+    },
+  ],
+  "comments": Array [],
+  "users": Array [
+    Object {
+      "bio": "I'm Jake",
+      "email": "jake@jake.jake",
+      "favorites": false,
+      "following": false,
+      "hash": true,
+      "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+      "salt": true,
+      "username": "jake",
+    },
+    Object {
+      "bio": "I'm Jim",
+      "email": "jim@jim.jim",
+      "favorites": false,
+      "following": false,
+      "hash": true,
+      "image": "https://i.stack.imgur.com/xHWG8.jpg",
+      "salt": true,
+      "username": "jim",
+    },
+    Object {
+      "bio": "I'm Joe",
+      "email": "joe@joe.joe",
+      "favorites": false,
+      "following": false,
+      "hash": true,
+      "image": "https://i.stack.imgur.com/xHWG8.jpg",
+      "salt": true,
+      "username": "joe",
+    },
+  ],
+}
+`;
+
+exports[`API tests GET /user: response 1`] = `
+Object {
+  "user": Object {
+    "bio": "I'm Jake",
+    "email": "jake@jake.jake",
+    "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+    "username": "jake",
+  },
+}
+`;
+
+exports[`API tests POST /:article/comments: DB 1`] = `
+Object {
+  "articles": Array [
+    Object {
+      "author": "jake",
+      "body": "Body Article One",
+      "createdAt": "2016-02-23T20:54:16.969Z",
+      "description": "description article one",
+      "favoritesCount": 1,
+      "slug": "articleslug-1",
+      "tagList": Array [
+        "tag1",
+        "tag2",
+      ],
+      "title": "Title Article One",
+      "updatedAt": "2016-02-23T20:54:16.969Z",
+    },
+    Object {
+      "author": "joe",
+      "body": "Body Article Two",
+      "createdAt": "2017-02-23T20:54:16.969Z",
+      "description": "description article Two",
+      "favoritesCount": 1,
+      "slug": "articleslug-2",
+      "tagList": Array [
+        "tag2",
+        "tag1",
+      ],
+      "title": "Title Article Two",
+      "updatedAt": "2017-02-23T20:54:16.969Z",
+    },
+    Object {
+      "author": "jim",
+      "body": "Body Article Three",
+      "createdAt": "2018-02-23T20:54:16.969Z",
+      "description": "description article Three",
+      "favoritesCount": 1,
+      "slug": "articleslug-3",
+      "tagList": Array [
+        "tag2",
+        "tag3",
+      ],
+      "title": "Title Article Three",
+      "updatedAt": "2018-02-23T20:54:16.969Z",
+    },
+  ],
+  "comments": Array [
+    Object {
+      "article": "articleslug-1",
+      "author": "jake",
+      "body": Object {
+        "comment": Object {
+          "body": "POST test comment",
+        },
+      },
+      "id": true,
+    },
+  ],
+  "users": Array [
+    Object {
+      "bio": "I'm Jake",
+      "email": "jake@jake.jake",
+      "favorites": false,
+      "following": false,
+      "hash": true,
+      "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+      "salt": true,
+      "username": "jake",
+    },
+    Object {
+      "bio": "I'm Jim",
+      "email": "jim@jim.jim",
+      "favorites": false,
+      "following": false,
+      "hash": true,
+      "image": "https://i.stack.imgur.com/xHWG8.jpg",
+      "salt": true,
+      "username": "jim",
+    },
+    Object {
+      "bio": "I'm Joe",
+      "email": "joe@joe.joe",
+      "favorites": false,
+      "following": false,
+      "hash": true,
+      "image": "https://i.stack.imgur.com/xHWG8.jpg",
+      "salt": true,
+      "username": "joe",
+    },
+  ],
+}
+`;
+
+exports[`API tests POST /:article/comments: response 1`] = `
+Object {
+  "comment": Object {
+    "author": Object {
+      "bio": "I'm Jake",
+      "following": false,
+      "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+      "username": "jake",
+    },
+    "body": Object {
+      "comment": Object {
+        "body": "POST test comment",
+      },
+    },
+    "id": true,
+  },
+}
+`;
+
+exports[`API tests POST /articles/:article/favorite: DB 1`] = `
+Object {
+  "articles": Array [
+    Object {
+      "author": "jake",
+      "body": "Body Article One",
+      "createdAt": "2016-02-23T20:54:16.969Z",
+      "description": "description article one",
+      "favorited": true,
+      "favoritesCount": 2,
+      "slug": "articleslug-1",
+      "tagList": Array [
+        "tag1",
+        "tag2",
+      ],
+      "title": "Title Article One",
+      "updatedAt": "2016-02-23T20:54:16.969Z",
+    },
+    Object {
+      "author": "joe",
+      "body": "Body Article Two",
+      "createdAt": "2017-02-23T20:54:16.969Z",
+      "description": "description article Two",
+      "favoritesCount": 1,
+      "slug": "articleslug-2",
+      "tagList": Array [
+        "tag2",
+        "tag1",
+      ],
+      "title": "Title Article Two",
+      "updatedAt": "2017-02-23T20:54:16.969Z",
+    },
+    Object {
+      "author": "jim",
+      "body": "Body Article Three",
+      "createdAt": "2018-02-23T20:54:16.969Z",
+      "description": "description article Three",
+      "favoritesCount": 1,
+      "slug": "articleslug-3",
+      "tagList": Array [
+        "tag2",
+        "tag3",
+      ],
+      "title": "Title Article Three",
+      "updatedAt": "2018-02-23T20:54:16.969Z",
+    },
+  ],
+  "comments": Array [],
+  "users": Array [
+    Object {
+      "bio": "I'm Jake",
+      "email": "jake@jake.jake",
+      "favorites": Array [
+        "articleslug-1",
+      ],
+      "following": false,
+      "hash": true,
+      "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+      "salt": true,
+      "username": "jake",
+    },
+    Object {
+      "bio": "I'm Jim",
+      "email": "jim@jim.jim",
+      "favorites": false,
+      "following": false,
+      "hash": true,
+      "image": "https://i.stack.imgur.com/xHWG8.jpg",
+      "salt": true,
+      "username": "jim",
+    },
+    Object {
+      "bio": "I'm Joe",
+      "email": "joe@joe.joe",
+      "favorites": false,
+      "following": false,
+      "hash": true,
+      "image": "https://i.stack.imgur.com/xHWG8.jpg",
+      "salt": true,
+      "username": "joe",
+    },
+  ],
+}
+`;
+
+exports[`API tests POST /articles/:article/favorite: response 1`] = `
+Object {
+  "article": Object {
+    "author": Object {
+      "bio": "I'm Jake",
+      "following": false,
+      "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+      "username": "jake",
+    },
+    "body": "Body Article One",
+    "createdAt": "2016-02-23T20:54:16.969Z",
+    "description": "description article one",
+    "favorited": true,
+    "favoritesCount": 2,
+    "slug": "articleslug-1",
+    "tagList": Array [
+      "tag1",
+      "tag2",
+    ],
+    "title": "Title Article One",
+    "updatedAt": "2016-02-23T20:54:16.969Z",
+  },
+}
+`;
+
+exports[`API tests POST /articles: DB 1`] = `
+Object {
+  "articles": Array [
+    Object {
+      "author": "jake",
+      "body": "Body Article One",
+      "createdAt": "2016-02-23T20:54:16.969Z",
+      "description": "description article one",
+      "favoritesCount": 1,
+      "slug": "articleslug-1",
+      "tagList": Array [
+        "tag1",
+        "tag2",
+      ],
+      "title": "Title Article One",
+      "updatedAt": "2016-02-23T20:54:16.969Z",
+    },
+    Object {
+      "author": "joe",
+      "body": "Body Article Two",
+      "createdAt": "2017-02-23T20:54:16.969Z",
+      "description": "description article Two",
+      "favoritesCount": 1,
+      "slug": "articleslug-2",
+      "tagList": Array [
+        "tag2",
+        "tag1",
+      ],
+      "title": "Title Article Two",
+      "updatedAt": "2017-02-23T20:54:16.969Z",
+    },
+    Object {
+      "author": "jim",
+      "body": "Body Article Three",
+      "createdAt": "2018-02-23T20:54:16.969Z",
+      "description": "description article Three",
+      "favoritesCount": 1,
+      "slug": "articleslug-3",
+      "tagList": Array [
+        "tag2",
+        "tag3",
+      ],
+      "title": "Title Article Three",
+      "updatedAt": "2018-02-23T20:54:16.969Z",
+    },
+    Object {
+      "author": "jake",
+      "body": "You have to believe",
+      "description": "Ever wonder how?",
+      "tagList": Array [
+        "reactjs",
+        "angularjs",
+        "dragons",
+      ],
+      "title": "How to train your dragon",
+    },
+  ],
+  "comments": Array [],
+  "users": Array [
+    Object {
+      "bio": "I'm Jake",
+      "email": "jake@jake.jake",
+      "favorites": false,
+      "following": false,
+      "hash": true,
+      "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+      "salt": true,
+      "username": "jake",
+    },
+    Object {
+      "bio": "I'm Jim",
+      "email": "jim@jim.jim",
+      "favorites": false,
+      "following": false,
+      "hash": true,
+      "image": "https://i.stack.imgur.com/xHWG8.jpg",
+      "salt": true,
+      "username": "jim",
+    },
+    Object {
+      "bio": "I'm Joe",
+      "email": "joe@joe.joe",
+      "favorites": false,
+      "following": false,
+      "hash": true,
+      "image": "https://i.stack.imgur.com/xHWG8.jpg",
+      "salt": true,
+      "username": "joe",
+    },
+  ],
+}
+`;
+
+exports[`API tests POST /articles: response 1`] = `
+Object {
+  "article": Object {
+    "author": Object {
+      "bio": "I'm Jake",
+      "following": false,
+      "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+      "username": "jake",
+    },
+    "body": "You have to believe",
+    "description": "Ever wonder how?",
+    "favorited": false,
+    "tagList": Array [
+      "reactjs",
+      "angularjs",
+      "dragons",
+    ],
+    "title": "How to train your dragon",
+  },
+}
+`;
+
+exports[`API tests POST /profiles/:username/follow: DB 1`] = `
+Object {
+  "articles": Array [
+    Object {
+      "author": "jake",
+      "body": "Body Article One",
+      "createdAt": "2016-02-23T20:54:16.969Z",
+      "description": "description article one",
+      "favoritesCount": 1,
+      "slug": "articleslug-1",
+      "tagList": Array [
+        "tag1",
+        "tag2",
+      ],
+      "title": "Title Article One",
+      "updatedAt": "2016-02-23T20:54:16.969Z",
+    },
+    Object {
+      "author": "joe",
+      "body": "Body Article Two",
+      "createdAt": "2017-02-23T20:54:16.969Z",
+      "description": "description article Two",
+      "favoritesCount": 1,
+      "slug": "articleslug-2",
+      "tagList": Array [
+        "tag2",
+        "tag1",
+      ],
+      "title": "Title Article Two",
+      "updatedAt": "2017-02-23T20:54:16.969Z",
+    },
+    Object {
+      "author": "jim",
+      "body": "Body Article Three",
+      "createdAt": "2018-02-23T20:54:16.969Z",
+      "description": "description article Three",
+      "favoritesCount": 1,
+      "slug": "articleslug-3",
+      "tagList": Array [
+        "tag2",
+        "tag3",
+      ],
+      "title": "Title Article Three",
+      "updatedAt": "2018-02-23T20:54:16.969Z",
+    },
+  ],
+  "comments": Array [],
+  "users": Array [
+    Object {
+      "bio": "I'm Jake",
+      "email": "jake@jake.jake",
+      "favorites": false,
+      "following": Array [
+        "jake",
+      ],
+      "hash": true,
+      "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+      "salt": true,
+      "username": "jake",
+    },
+    Object {
+      "bio": "I'm Jim",
+      "email": "jim@jim.jim",
+      "favorites": false,
+      "following": false,
+      "hash": true,
+      "image": "https://i.stack.imgur.com/xHWG8.jpg",
+      "salt": true,
+      "username": "jim",
+    },
+    Object {
+      "bio": "I'm Joe",
+      "email": "joe@joe.joe",
+      "favorites": false,
+      "following": false,
+      "hash": true,
+      "image": "https://i.stack.imgur.com/xHWG8.jpg",
+      "salt": true,
+      "username": "joe",
+    },
+  ],
+}
+`;
+
+exports[`API tests POST /profiles/:username/follow: response 1`] = `
+Object {
+  "profile": Object {
+    "bio": "I'm Jake",
+    "following": true,
+    "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+    "username": "jake",
+  },
+}
+`;
+
+exports[`API tests POST /users/login: DB 1`] = `
+Object {
+  "articles": Array [
+    Object {
+      "author": "jake",
+      "body": "Body Article One",
+      "createdAt": "2016-02-23T20:54:16.969Z",
+      "description": "description article one",
+      "favoritesCount": 1,
+      "slug": "articleslug-1",
+      "tagList": Array [
+        "tag1",
+        "tag2",
+      ],
+      "title": "Title Article One",
+      "updatedAt": "2016-02-23T20:54:16.969Z",
+    },
+    Object {
+      "author": "joe",
+      "body": "Body Article Two",
+      "createdAt": "2017-02-23T20:54:16.969Z",
+      "description": "description article Two",
+      "favoritesCount": 1,
+      "slug": "articleslug-2",
+      "tagList": Array [
+        "tag2",
+        "tag1",
+      ],
+      "title": "Title Article Two",
+      "updatedAt": "2017-02-23T20:54:16.969Z",
+    },
+    Object {
+      "author": "jim",
+      "body": "Body Article Three",
+      "createdAt": "2018-02-23T20:54:16.969Z",
+      "description": "description article Three",
+      "favoritesCount": 1,
+      "slug": "articleslug-3",
+      "tagList": Array [
+        "tag2",
+        "tag3",
+      ],
+      "title": "Title Article Three",
+      "updatedAt": "2018-02-23T20:54:16.969Z",
+    },
+  ],
+  "comments": Array [],
+  "users": Array [
+    Object {
+      "bio": "I'm Jake",
+      "email": "jake@jake.jake",
+      "favorites": false,
+      "following": false,
+      "hash": true,
+      "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+      "salt": true,
+      "username": "jake",
+    },
+    Object {
+      "bio": "I'm Jim",
+      "email": "jim@jim.jim",
+      "favorites": false,
+      "following": false,
+      "hash": true,
+      "image": "https://i.stack.imgur.com/xHWG8.jpg",
+      "salt": true,
+      "username": "jim",
+    },
+    Object {
+      "bio": "I'm Joe",
+      "email": "joe@joe.joe",
+      "favorites": false,
+      "following": false,
+      "hash": true,
+      "image": "https://i.stack.imgur.com/xHWG8.jpg",
+      "salt": true,
+      "username": "joe",
+    },
+  ],
+}
+`;
+
+exports[`API tests POST /users/login: response 1`] = `
+Object {
+  "user": Object {
+    "bio": "I'm Jake",
+    "email": "jake@jake.jake",
+    "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+    "token": true,
+    "username": "jake",
+  },
+}
+`;
+
+exports[`API tests POST /users: DB 1`] = `
+Object {
+  "articles": Array [],
+  "comments": Array [],
+  "users": Array [
+    Object {
+      "bio": "",
+      "email": "john@john.john",
+      "favorites": false,
+      "following": false,
+      "hash": true,
+      "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+      "salt": true,
+      "username": "John",
+    },
+  ],
+}
+`;
+
+exports[`API tests POST /users: response 1`] = `
+Object {
+  "user": Object {
+    "bio": "",
+    "email": "john@john.john",
+    "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+    "username": "John",
+  },
+}
+`;
+
+exports[`API tests PUT /articles/:article: DB 1`] = `
+Object {
+  "articles": Array [
+    Object {
+      "author": "jake",
+      "body": "Body Article One",
+      "createdAt": "2016-02-23T20:54:16.969Z",
+      "description": "description article one",
+      "favoritesCount": 1,
+      "slug": "articleslug-1",
+      "tagList": Array [
+        "tag1",
+        "tag2",
+      ],
+      "title": "Did you train your dragon?",
+      "updatedAt": "2016-02-23T20:54:16.969Z",
+    },
+    Object {
+      "author": "joe",
+      "body": "Body Article Two",
+      "createdAt": "2017-02-23T20:54:16.969Z",
+      "description": "description article Two",
+      "favoritesCount": 1,
+      "slug": "articleslug-2",
+      "tagList": Array [
+        "tag2",
+        "tag1",
+      ],
+      "title": "Title Article Two",
+      "updatedAt": "2017-02-23T20:54:16.969Z",
+    },
+    Object {
+      "author": "jim",
+      "body": "Body Article Three",
+      "createdAt": "2018-02-23T20:54:16.969Z",
+      "description": "description article Three",
+      "favoritesCount": 1,
+      "slug": "articleslug-3",
+      "tagList": Array [
+        "tag2",
+        "tag3",
+      ],
+      "title": "Title Article Three",
+      "updatedAt": "2018-02-23T20:54:16.969Z",
+    },
+  ],
+  "comments": Array [],
+  "users": Array [
+    Object {
+      "bio": "I'm Jake",
+      "email": "jake@jake.jake",
+      "favorites": false,
+      "following": false,
+      "hash": true,
+      "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+      "salt": true,
+      "username": "jake",
+    },
+    Object {
+      "bio": "I'm Jim",
+      "email": "jim@jim.jim",
+      "favorites": false,
+      "following": false,
+      "hash": true,
+      "image": "https://i.stack.imgur.com/xHWG8.jpg",
+      "salt": true,
+      "username": "jim",
+    },
+    Object {
+      "bio": "I'm Joe",
+      "email": "joe@joe.joe",
+      "favorites": false,
+      "following": false,
+      "hash": true,
+      "image": "https://i.stack.imgur.com/xHWG8.jpg",
+      "salt": true,
+      "username": "joe",
+    },
+  ],
+}
+`;
+
+exports[`API tests PUT /articles/:article: response 1`] = `
+Object {
+  "article": Object {
+    "author": Object {
+      "bio": "I'm Jake",
+      "following": false,
+      "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+      "username": "jake",
+    },
+    "body": "Body Article One",
+    "createdAt": "2016-02-23T20:54:16.969Z",
+    "description": "description article one",
+    "favorited": false,
+    "favoritesCount": 1,
+    "slug": "articleslug-1",
+    "tagList": Array [
+      "tag1",
+      "tag2",
+    ],
+    "title": "Did you train your dragon?",
+    "updatedAt": "2016-02-23T20:54:16.969Z",
+  },
+}
+`;
+
+exports[`API tests PUT /user: DB 1`] = `
+Object {
+  "articles": Array [
+    Object {
+      "author": "jake",
+      "body": "Body Article One",
+      "createdAt": "2016-02-23T20:54:16.969Z",
+      "description": "description article one",
+      "favoritesCount": 1,
+      "slug": "articleslug-1",
+      "tagList": Array [
+        "tag1",
+        "tag2",
+      ],
+      "title": "Title Article One",
+      "updatedAt": "2016-02-23T20:54:16.969Z",
+    },
+    Object {
+      "author": "joe",
+      "body": "Body Article Two",
+      "createdAt": "2017-02-23T20:54:16.969Z",
+      "description": "description article Two",
+      "favoritesCount": 1,
+      "slug": "articleslug-2",
+      "tagList": Array [
+        "tag2",
+        "tag1",
+      ],
+      "title": "Title Article Two",
+      "updatedAt": "2017-02-23T20:54:16.969Z",
+    },
+    Object {
+      "author": "jim",
+      "body": "Body Article Three",
+      "createdAt": "2018-02-23T20:54:16.969Z",
+      "description": "description article Three",
+      "favoritesCount": 1,
+      "slug": "articleslug-3",
+      "tagList": Array [
+        "tag2",
+        "tag3",
+      ],
+      "title": "Title Article Three",
+      "updatedAt": "2018-02-23T20:54:16.969Z",
+    },
+  ],
+  "comments": Array [],
+  "users": Array [
+    Object {
+      "bio": "I like to skateboard",
+      "email": "jake@jake.jake",
+      "favorites": false,
+      "following": false,
+      "hash": true,
+      "image": "https://i.stack.imgur.com/xHWG8.jpg",
+      "salt": true,
+      "username": "jake",
+    },
+    Object {
+      "bio": "I'm Jim",
+      "email": "jim@jim.jim",
+      "favorites": false,
+      "following": false,
+      "hash": true,
+      "image": "https://i.stack.imgur.com/xHWG8.jpg",
+      "salt": true,
+      "username": "jim",
+    },
+    Object {
+      "bio": "I'm Joe",
+      "email": "joe@joe.joe",
+      "favorites": false,
+      "following": false,
+      "hash": true,
+      "image": "https://i.stack.imgur.com/xHWG8.jpg",
+      "salt": true,
+      "username": "joe",
+    },
+  ],
+}
+`;
+
+exports[`API tests PUT /user: response 1`] = `
+Object {
+  "user": Object {
+    "bio": "I like to skateboard",
+    "email": "jake@jake.jake",
+    "image": "https://i.stack.imgur.com/xHWG8.jpg",
+    "username": "jake",
+  },
+}
+`;

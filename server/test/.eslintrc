@@ -1,6 +1,8 @@
 {
-	"extends": [
-	  "plugin:cypress-dev/general",
-	  "plugin:cypress-dev/tests"
-	]
-  }
+	"rules":{
+		"no-trailing-spaces":0
+	},
+	"env": {
+		"jest/globals":true
+	}
+}
