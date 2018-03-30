@@ -31,7 +31,7 @@ const cleanseDb = (db) => {
 }
 
 const snapshotAll = (res) =>
-  Promise.resolve(expect(res.body).toMatchSnapshot(`response`))
+  Promise.resolve(expect(res.body).toMatchSnapshot('response'))
   .then(yieldDb)
   .then(cleanseDb)
   .then((db) => expect(db).toMatchSnapshot('DB'))
