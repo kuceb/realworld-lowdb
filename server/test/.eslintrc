@@ -1,6 +1,7 @@
 {
+	"extends": ["plugins:jest/recommended"],
 	"rules":{
-		"no-trailing-spaces":0
+		"no-trailing-spaces":"off"
 	},
 	"env": {
 		"jest/globals":true
