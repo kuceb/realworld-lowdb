@@ -61,11 +61,11 @@
     "test": "cross-env PORT=4100 react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "server:start": "node ./server/index.js",
-    "server:dev": "nodemon ./server/index.js --ignore server/data/db.json",
-    "server:debug": "nodemon --inspect ./server/index.js --ignore server/data/db.json",
-    "server:test": "NODE_ENV=test jest server/test/**/*.js",
-    "server:test-dev": "NODE_ENV=test jest -w server/test/**/*.js",
-    "server:test-debug": "NODE_ENV=test jest -w --inspect --inspect-brk server/test/**/*.js",
+    "server:dev": "nodemon ./server/index.js",
+    "server:debug": "nodemon --inspect ./server/index.js",
+    "server:test": "jest server/test",
+    "server:test-dev": "jest server/test/*.js --watch",
+    "server:test-debug": "jest --watch --inspect --inspect-brk server/test/",
     "server:test-postman": "newman run ./server/tests/api-tests.postman.json -e ./server/tests/env-api-tests.postman.json"
   }
 }

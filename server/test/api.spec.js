@@ -116,8 +116,7 @@ describe('API tests', () => {
   )
 
   it('GET /articles/:article', () =>
-    seedArticlesMany()
-    .then(() => seedUsersMany())
+    seedAll()
     .then((db) => db.articles[0].slug)
     .then((slug) => request.get(`/api/articles/${slug}`).expect(200))
     .then(snapshotAll)

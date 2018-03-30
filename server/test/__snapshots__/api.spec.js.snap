@@ -506,7 +506,32 @@ Object {
       "updatedAt": "2018-02-23T20:54:16.969Z",
     },
   ],
-  "comments": Array [],
+  "comments": Array [
+    Object {
+      "article": "articleslug-1",
+      "author": "jake",
+      "body": "Jake takes a Jacobian",
+      "createdAt": "2016-02-18T03:22:56.637Z",
+      "id": true,
+      "updatedAt": "2016-02-18T03:22:56.637Z",
+    },
+    Object {
+      "article": "articleslug-1",
+      "author": "jim",
+      "body": "Jim takes a Jacobian",
+      "createdAt": "2015-02-18T03:22:56.637Z",
+      "id": true,
+      "updatedAt": "2015-02-18T03:22:56.637Z",
+    },
+    Object {
+      "article": "articleslug-1",
+      "author": "joe",
+      "body": "Joe takes a Jacobian",
+      "createdAt": "2014-02-18T03:22:56.637Z",
+      "id": true,
+      "updatedAt": "2014-02-18T03:22:56.637Z",
+    },
+  ],
   "users": Array [
     Object {
       "bio": "I'm Jake",
