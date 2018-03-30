@@ -1,14 +1,14 @@
-const snapshot = require('snap-shot-it')
+/// <reference types="jest" />
+
+const _ = require('lodash')
 const Promise = require('bluebird')
 const supertest = require('supertest')
+
 const app = require('../src/app').app
-const _ = require('lodash')
 const request = supertest(app)
 
-let currentTest
-const getTestName = () => currentTest.fullTitle()
-
 let seeder
+
 const yieldDb = () => seeder.read()
 
 const cleanseDb = (db) => {
@@ -31,10 +31,10 @@ const cleanseDb = (db) => {
 }
 
 const snapshotAll = (res) =>
-  Promise.resolve(snapshot(`${getTestName()} - res.body`, res.body))
+  Promise.resolve(expect(res.body).toMatchSnapshot(`response`))
   .then(yieldDb)
   .then(cleanseDb)
-  .then((db) => snapshot(`${getTestName()} - DB`, db))
+  .then((db) => expect(db).toMatchSnapshot('DB'))
 
 const seedUsersSingle = () => {
   const seed = _.cloneDeep(require('../seeds/users/single.json'))
@@ -79,17 +79,17 @@ const loginWithHeaders = () =>
   .then((token) => (aRequest) => aRequest.set('Authorization', `Bearer ${token}`))
 
 describe('API tests', () => {
-  before(() => {
-    return app.setup().then(() => {
+  beforeAll(() =>
+    app.setup().then(() => {
       seeder = require('../lib/seeder')
     })
-  })
-  beforeEach('clear db', function () {
-    currentTest = this.currentTest
-    return seeder.clear()
-  })
+  )
 
-  it('GET /tags', () =>
+  beforeEach(() =>
+    seeder.clear()
+  )
+
+  it('GET /tags', () =>  
     seedArticlesMany()
     .then(() => request.get('/api/tags').expect(200))
     .then(snapshotAll)
@@ -130,9 +130,6 @@ describe('API tests', () => {
     )
     .then(snapshotAll)
   )
-
-  // it('GET /feed without auth', () =>
-  //   request.get('/api/articles/feed').expect(401))
 
   it('POST /:article/comments', () =>
     loginWithHeaders()
