@@ -18,7 +18,7 @@ selenium-debug.log
 .settings/
 .vscode/
 
-server/data
+server/.data
 
 # System Files
 .DS_Store
