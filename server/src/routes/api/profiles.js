@@ -39,7 +39,7 @@ router.post('/:username/follow', auth.required, function (req, res, next) {
   return User().find({ username: user.username })
   .assign(user)
   .write()
-  .then((db) => res.json({ profile: userToJSONFor(User().find({username: req.user.username}).value(), user) }))
+  .then(() => res.json({ profile: userToJSONFor(User().find({ username: req.user.username }).value(), user) }))
 })
 
 router.delete('/:username/follow', auth.required, function (req, res, next) {
@@ -60,7 +60,7 @@ router.delete('/:username/follow', auth.required, function (req, res, next) {
   return User().find({ username: user.username })
   .assign(user)
   .write()
-  .then((db) => res.json({ profile: userToJSONFor(User().find({username: req.user.username}).value(), user) }))
+  .then(() => res.json({ profile: userToJSONFor(User().find({ username: req.user.username }).value(), user) }))
 })
 
 module.exports = router

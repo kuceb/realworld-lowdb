@@ -5,7 +5,6 @@ const crypto = require('crypto')
 const passport = require('passport')
 
 const auth = require('../auth')
-const db = require('../../db').get()
 const secret = require('../../config').secret
 const { User } = require('../../models').get()
 const { toAuthJSON } = require('../../../lib/mappings')
@@ -44,7 +43,7 @@ router.put('/user', auth.required, function (req, res, next) {
   }
 
   // console.log(User().find({ username: user.username }).value())
-  User().find({ username: "jake" })
+  User().find({ username: 'jake' })
   .assign(user).write()
   .then(() => res.json({ user: toAuthJSON(user) }))
 })
@@ -113,8 +112,8 @@ function generateJWT (user) {
 
 function getHash (password, salt) {
   let hash = crypto
-    .pbkdf2Sync(password, salt, 10000, 512, 'sha512')
-    .toString('hex')
+  .pbkdf2Sync(password, salt, 10000, 512, 'sha512')
+  .toString('hex')
   return hash
 }
 

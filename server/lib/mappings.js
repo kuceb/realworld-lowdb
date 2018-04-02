@@ -9,7 +9,7 @@ let mappings = {
       image:
         user.image ||
         'https://static.productionready.io/images/smiley-cyrus.jpg',
-      following: userFor ? _.includes(userFor.following, user.username) : false
+      following: userFor ? _.includes(userFor.following, user.username) : false,
     }
   },
   toAuthJSON: (user) => {
