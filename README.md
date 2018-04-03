@@ -1,7 +1,6 @@
-![logo](project-logo.png)
 
 # realworld-lowdb
-*Realworld implemented with an inplace json database + Express server*
+*Realworld react-redux client + an in-place json database + Express server*
 
 
 [![CircleCI](https://circleci.com/gh/Bkucera/realworld-lowdb.svg?style=svg)](https://circleci.com/gh/Bkucera/realworld-lowdb)
