@@ -275,4 +275,45 @@ describe('API tests', () => {
     .then(() => request.get('/api/articles?author=jake').expect(200))
     .then(snapshotAll)
   )
+
+  it('POST users/login (no email)', () => 
+    seedAll()
+      .then(() =>
+        request.post('/api/users/login')
+        .send({
+          user: {
+            password: 'jakejake',
+          },
+        })
+        .expect(422)
+    )
+    .then(snapshotAll)
+  )
+
+  it('POST users/login (no password)', () => 
+    seedAll()
+      .then(() =>
+        request.post('/api/users/login')
+        .send({
+          user: {
+            email: "jake@jake.jake"
+          },
+        })
+        .expect(422)
+    )
+    .then(snapshotAll)
+  )
+
+  it('POST users/login (no password | email)', () => 
+    seedAll()
+      .then(() =>
+        request.post('/api/users/login')
+        .send({
+          user: {
+          },
+        })
+        .expect(422)
+    )
+    .then(snapshotAll)
+  )
 })
