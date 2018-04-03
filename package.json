@@ -2,6 +2,19 @@
   "name": "react-redux-realworld-example-app",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "cross-env PORT=4100 react-scripts start",
+    "build": "react-scripts build",
+    "test": "cross-env PORT=4100 react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "server:start": "node ./server/index.js",
+    "server:dev": "nodemon ./server/index.js",
+    "server:debug": "nodemon --inspect ./server/index.js",
+    "server:test": "jest server/test",
+    "server:test-dev": "jest server/test/*.js --watch",
+    "server:test-debug": "jest --watch --inspect --inspect-brk server/test/",
+    "server:test-postman": "newman run ./server/tests/api-tests.postman.json -e ./server/tests/env-api-tests.postman.json"
+  },
   "devDependencies": {
     "chai": "^4.1.2",
     "cross-env": "^4.0.0",
@@ -54,18 +67,5 @@
     "superagent": "^2.3.0",
     "superagent-promise": "^1.1.0",
     "underscore": "1.8.3"
-  },
-  "scripts": {
-    "start": "cross-env PORT=4100 react-scripts start",
-    "build": "react-scripts build",
-    "test": "cross-env PORT=4100 react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "server:start": "node ./server/index.js",
-    "server:dev": "nodemon ./server/index.js",
-    "server:debug": "nodemon --inspect ./server/index.js",
-    "server:test": "jest server/test",
-    "server:test-dev": "jest server/test/*.js --watch",
-    "server:test-debug": "jest --watch --inspect --inspect-brk server/test/",
-    "server:test-postman": "newman run ./server/tests/api-tests.postman.json -e ./server/tests/env-api-tests.postman.json"
   }
 }
