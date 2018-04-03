@@ -6,20 +6,27 @@
 
 [![CircleCI](https://circleci.com/gh/cypress-io/cypress-example-realworld.svg?style=svg&circle-token=f127e83138e505b26bb90ab7c0bcb60e5265fecb)](https://circleci.com/gh/cypress-io/cypress-example-realworld)
 
-Run api tests:
+Install dependencies:
 ```
-npm run server:test
+npm install
+```
+
+Run api tests:
+```bash
+# silence the annoying npm exit code error
+npm run server:test --silent
 ```
 
 Start server on port 3000:
-```
+```bash
 npm run server:start
 ```
 
 Start client on port 4100:
-```
+```bash
 npm start
 ```
 
-JSON database writes to `server/data/db.json`
+JSON database writes to `server/.data/db.json`.  
+This prevents file watchers from picking up changes to the db.
 
