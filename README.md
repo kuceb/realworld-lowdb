@@ -1,10 +1,10 @@
 ![logo](project-logo.png)
 
-# Cypress-example-realworld
-*a full stack example of Cypress use cases and best practices*
+# realworld-lowdb
+*Realworld implemented with an inplace json database + Express server*
 
 
-[![CircleCI](https://circleci.com/gh/cypress-io/cypress-example-realworld.svg?style=svg&circle-token=f127e83138e505b26bb90ab7c0bcb60e5265fecb)](https://circleci.com/gh/cypress-io/cypress-example-realworld)
+[![CircleCI](https://circleci.com/gh/Bkucera/realworld-lowdb.svg?style=svg)](https://circleci.com/gh/Bkucera/realworld-lowdb)
 
 Install dependencies:
 ```
